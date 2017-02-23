@@ -1,0 +1,55 @@
+<ion-view title="Domicilio" hide-nav-bar="true" cache-view="false" id="page11">
+  <ion-content padding="false" style="background: url(img/WqRfiSyYRSG9ZPAcrOZ7_Login.jpg) no-repeat center;background-size:cover;" class="manual-ios-statusbar-padding">
+    <div id="domicilio-markdown14" ng-if="error" ng-click="clearerror()" class="show-list-numbers-and-dots error-box">
+      <p style="color:#000000;">{{error}}</p>
+    </div>
+    <div class="toprightclose">
+      <a style="display:block;" ui-sref="tabsController.menuSemanal">
+        <img src="img/hVxu5zo8SuivQ0JMU9MN_close.svg" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+      </a>
+    </div>
+    <form id="domicilio-form6" class="list center-form-registro">
+      <div>
+        <img src="img/gDIa4hhQQ2i7i3z3cYtm_iconotransp.png" style="display: block; width: 45%; height: auto; margin-left: auto; margin-right: auto;">
+      </div>
+      <div class="spacer" style="width: 300px; height: 13px;"></div>
+      <div id="domicilio-markdown15" style="text-align:center;" class="show-list-numbers-and-dots margbotm5">
+        <p style="color:#FFFFFF;font-size:16px;">Dirección para entregas</p>
+      </div>
+      <ion-list id="domicilio-list15" class="listborders">
+        <label class="item item-input top-input" id="domicilio-input18">
+          <input type="text" placeholder="Calle y Número" ng-model="data.direccion">
+        </label>
+        <label class="item item-input mid-input" id="domicilio-input19">
+          <input type="text" placeholder="Num. Interior y/o Referencias" ng-model="data.referencia">
+        </label>
+        <label class="item item-input mid-input" id="domicilio-input11">
+          <input type="text" placeholder="Colonia" ng-model="data.colonia">
+        </label>
+        <label class="item item-input mid-input" id="domicilio-input12">
+          <input type="text" placeholder="Ciudad" ng-model="data.ciudad">
+        </label>
+        <label class="item item-input bottom-input margbot5" id="domicilio-input23">
+          <input type="text" placeholder="Código Postal" ng-model="data.cp">
+        </label>
+      </ion-list>
+      <label class="item item-select horariocomida" id="domicilio-select3">
+        <span class="input-label">Horario de Comida</span>
+        <select ng-model="data.horacomida">
+          <option></option>
+          <option>12:00</option>
+          <option>12:30</option>
+          <option>13:00</option>
+          <option>13:30</option>
+          <option>14:00</option>
+          <option>14:30</option>
+          <option>15:00</option>
+        </select>
+      </label>
+      <div id="domicilio-markdown24" style="text-align:center;" class="show-list-numbers-and-dots margbotm5 back">
+        <p style="color:#FFFFFF;font-size:11px;">Cuando al hacer el pedido se habilita la opción de "Envío dentro de la hora de comida", se garantiza la entrega dentro de los 20 minutos antes y después de la hora seleccionada</p>
+      </div>
+      <button id="domicilio-button12" ng-click="guardadireccion()" class="button button-positive  button-block">Guardar Datos de Envío</button>
+    </form>
+  </ion-content>
+</ion-view>

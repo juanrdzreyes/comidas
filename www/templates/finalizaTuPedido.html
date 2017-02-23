@@ -1,0 +1,88 @@
+<ion-view title="Finaliza tu pedido" hide-nav-bar="true" cache-view="false" id="page4">
+  <ion-content padding="true" class="manual-ios-statusbar-padding">
+    <div id="finalizaTuPedido-container11" class="finalizapedido">
+      <div class="toprightclose">
+        <img src="img/a2pK5eXYTCqqX7jFvGXw_close.svg" style="display: block; width: 30px; height: auto; margin-left: auto;" ng-click="cierrapedido()">
+      </div>
+      <div class="spacer" style="width: 300px; height: 40px;"></div>
+      <div>
+        <img src="img/dTaf3SYpRNOhRgVLJxZ8_IconoNegro.png" style="display: block; width: 120px; height: auto; margin-left: auto; margin-right: auto;">
+      </div>
+      <h4 id="finalizaTuPedido-heading2" style="color:#000000;text-align:center;">Finaliza tu pedido</h4>
+      <div id="finalizaTuPedido-markdown9" class="show-list-numbers-and-dots margbotm5">
+        <p style="color:#000000;font-size:16px;">
+          <strong>Pedido</strong>:</p>
+      </div>
+      <div>
+        <p ng-show="fuente==0" style="padding-left:10px">
+          <span ng-show="lunes.activo==1">Lunes: {{lunes.name}}
+            <br>
+          </span>
+          <span ng-show="martes.activo==1">Martes: {{martes.name}}
+            <br>
+          </span>
+          <span ng-show="miercoles.activo==1">
+            Miércoles: {{miercoles.name}}
+            <br>
+          </span>
+          <span ng-show="jueves.activo==1">
+            Jueves: {{jueves.name}}
+            <br>
+          </span>
+          <span ng-show="viernes.activo==1">
+            Viernes: {{viernes.name}}
+          </span>
+        </p>
+        <p ng-show="fuente==1" style="padding-left:10px">
+          {{platillo.nombre}}
+          <br> {{platillo.desc}}
+        </p>
+      </div>
+      <form id="finalizaTuPedido-form11" class="list formfinaliza" ng-show="fuente==1">
+        <label class="item item-select selectfecha" id="finalizaTuPedido-select2">
+          <span class="input-label">Día de Entrega</span>
+          <select ng-options="opcion.label for opcion in data.opciones track by opcion.id" ng-model="data.opcionselec" ng-disabled="popupinfo">
+            <option>{{opcion.name}}</option>
+          </select>
+        </label>
+      </form>
+      <form id="finalizaTuPedido-form9" class="list formfinaliza">
+        <div id="finalizaTuPedido-markdown11" class="show-list-numbers-and-dots margbotm5">
+          <p style="color:#000000;">Opciones disponibles</p>
+        </div>
+        <ion-checkbox id="finalizaTuPedido-checkbox4" ng-click="actprecio(descuento)" ng-checked="!descuento.activo" ng-model="descuento.checked" ng-repeat="descuento in descs[fuente]" ng-disabled="popupinfo" class="selectdescuentos">{{descuento.desc}} ( ${{descuento.monto}} )</ion-checkbox>
+      </form>
+    </div>
+    <div class="spacer" style="width: 300px; height: 14px;"></div>
+    <div id="finalizaTuPedido-markdown12" style="text-align:center;" class="show-list-numbers-and-dots margbotm5">
+      <p style="color:#000000;font-size:16px;">Total del pedido: $ {{TOTALPED}}</p>
+    </div>
+    <div id="finalizaTuPedido-container13" class="bottom-container">
+      <div class="bottomleftinfo opac0">
+        <img src="img/LJFgU3UmRLqmrNwKm9qY_airplay.svg" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;" ng-show="existedireccion==0">
+      </div>
+      <div class="bottomrightinfo">
+        <img src="img/9eiDLQ7cRtCmZ0Lj1Ur0_attention-red.svg" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;" ng-show="existedireccion==0" ng-click="showpopup(&quot;Favor de asegurarte de ingresar con tu cuenta y contar con datos de envío registrados correctamente.&quot;,0)">
+      </div>
+      <button id="finalizaTuPedido-button13" ng-click="existedireccion &amp;&amp; registrapedido()" ng-class="{0:'button-dark disabbutton'}[existedireccion]" style="border-radius:0px 0px 0px 0px;" class="button button-balanced  button-block botoncomprar enlinea">Confirmar pedido</button>
+    </div>
+    <div id="finalizaTuPedido-container16" ng-show="popupinfo==1" class="popupchangedelete ng-hide">
+      <div class="spacer" style="width: 305.188px; height: 10px;"></div>
+      <div id="finalizaTuPedido-markdown22" class="show-list-numbers-and-dots enlinea">
+        <p style="color:#000000;">{{popuptext}}</p>
+      </div>
+      <button id="finalizaTuPedido-button20" ng-click="closepopup(accionpopup)" style="border-radius:0px 0px 0px 0px;" class="button button-positive  botonpopup">Aceptar</button>
+      <div class="spacer" style="width: 305.188px; height: 11px;"></div>
+    </div>
+    <form id="finalizaTuPedido-form15" class="list fullpagewhite ng-hide" ng-show="enviando==1">
+      <div class="spacer" style="height: 40px;"></div>
+      <div>
+        <img src="img/O46sRMWCSIOUwaoBtkAu_IconoNegro.png" style="display: block; width: 120px; height: auto; margin-left: auto; margin-right: auto;">
+      </div>
+      <div class="spacer" style="height: 12px;"></div>
+      <div id="finalizaTuPedido-markdown23" style="text-align:center;" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">Enviando pedido...</p>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

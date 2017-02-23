@@ -1,0 +1,20 @@
+<ion-view title="Comida por dia" hide-back-button="true" id="page3" class="listaexpressparent">
+  <ion-content padding="false" class="has-header">
+    <div id="comidaPorDia-container9" class="listaexpress">
+      <ion-list id="comidaPorDia-list20">
+        <ion-item class="item-thumbnail-left  enexpress" id="comidaPorDia-list-item42" ng-repeat="plat in platillos" ng-click="pedido(plat)">
+          <img src="{{plat.img}}">
+          <h2>$ {{plat.price}}</h2>
+          <p></p>
+          <div class="contain">
+            <div class="fila">
+              <p class="header">{{plat.name}}</p>
+              <p class="descrip">{{plat.desc}}</p>
+            </div>
+            <p></p>
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,37 @@
+<ion-view title="Historial de pedidos" hide-nav-bar="true" cache-view="false" id="page13" class="listacambioparent">
+  <ion-content padding="false" class="manual-ios-statusbar-padding">
+    <div class="toprightclose">
+      <a style="display:block;" ui-sref="tabsController.menuSemanal">
+        <img src="img/Vqkm4fMNSmuPkuyu4qoA_close.svg" style="display: block; margin-left: auto;">
+      </a>
+    </div>
+    <div class="spacer" style="width: 320px; height: 26px;"></div>
+    <form id="historialDePedidos-form16" class="list fullpagewhite ng-hide" ng-show="descargando==1">
+      <div class="spacer" style="height: 100px;"></div>
+      <div class="enhist">
+        <img src="img/RTojmi4rQMa4xxSjaXUA_IconoNegro.png" style="display: block; width: 40%; height: auto; margin-left: auto; margin-right: auto;">
+      </div>
+      <div class="spacer" style="width: 320px; height: 56px;"></div>
+      <div id="historialDePedidos-markdown25" style="text-align:center;" class="show-list-numbers-and-dots enhist">
+        <p style="color:#000000;">Descargando información...</p>
+      </div>
+    </form>
+    <h4 id="historialDePedidos-heading6" style="color:#000000;text-align:center;">Historial de pedidos</h4>
+    <div id="historialDePedidos-container17" class="listacambio">
+      <ion-list id="historialDePedidos-list12">
+        <ion-item class="item-thumbnail-left  enexpress enhistorial" id="historialDePedidos-list-item47" ui-sref="tabsController.menuSemanal" ng-repeat="pedido in pedidos">
+          <img src="img/mAHqNDqTTGwvTcoDEYgZ_IconoNegro.png">
+          <h2>$ {{pedido.precio}}</h2>
+          <p></p>
+          <div class="contain">
+            <div class="fila">
+              <p class="header">{{pedido.titulo}}</p>
+              <p class="descrip">{{pedido.txtpedido}}</p>
+            </div>
+            <p></p>
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>

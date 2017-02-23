@@ -1,0 +1,39 @@
+<ion-view title="Login" hide-nav-bar="true" hide-back-button="true" cache-view="false" id="page6">
+  <ion-content padding="false" style="background: url(img/WqRfiSyYRSG9ZPAcrOZ7_Login.jpg) no-repeat center;background-size:cover;" class="manual-ios-statusbar-padding" scroll="false">
+    <div id="login-markdown1" ng-if="error" ng-click="clearerror()" class="show-list-numbers-and-dots error-box">
+      <p style="color:#000000;">{{error}}</p>
+    </div>
+    <form id="login-form12" class="list fullpagewhite ng-hide item-animate" ng-show="cargando==1">
+      <div class="spacer" style="height: 100px;"></div>
+      <div>
+        <img src="img/PtnPhnZZRJ2RJ4ksxMHB_IconoNegro.png" style="display: block; width: 40%; height: auto; margin-left: auto; margin-right: auto;">
+      </div>
+      <div class="spacer" style="width: 320px; height: 12px;"></div>
+      <div id="login-markdown17" style="text-align:center;" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">Cargando información...</p>
+      </div>
+    </form>
+    <form id="login-form1" class="list center-form">
+      <div class="spacer" style="width: 288px; height: 82px;"></div>
+      <div>
+        <img src="img/gDIa4hhQQ2i7i3z3cYtm_iconotransp.png" style="display: block; width: 45%; height: auto; margin-left: auto; margin-right: auto;">
+      </div>
+      <div class="spacer" style="width: 300px; height: 20px;"></div>
+      <ion-list id="login-list3">
+        <label class="item item-input top-input margbot5" id="login-input1">
+          <span class="input-label">Email</span>
+          <input type="email" placeholder="" ng-model="data.email">
+        </label>
+        <label class="item item-input bottom-input" id="login-input5">
+          <span class="input-label">Password</span>
+          <input type="password" placeholder="" ng-model="data.password">
+        </label>
+      </ion-list>
+      <div class="spacer" style="width: 300px; height: 14px;"></div>
+      <button id="login-button1" ng-click="login()" class="button button-positive  button-block height30">Log in</button>
+      <a ui-sref="registro" id="login-button2" class="button button-dark  button-block button-clear">Crea una cuenta nueva</a>
+      <div class="spacer" style="width: 288px; height: 40px;"></div>
+      <button id="login-button6" ng-click="abrirApp()" style="font-size:15px;" class="button button-balanced button-small button-block botonabajo">Ingresar como Invitado</button>
+    </form>
+  </ion-content>
+</ion-view>

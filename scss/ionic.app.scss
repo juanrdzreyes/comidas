@@ -1,0 +1,739 @@
+$SIDEMENU_TOP: #19008b;
+$SIDEMENU_BOTTOM: #3e69bd;
+$SIDEMENU_TRANSPARENCY: rgba(255,255,255,0.4);
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+@import "../www/lib/ionic/scss";
+//SideMenu {
+	.side-menu-item {
+		background: none;
+		color: white;
+		font-weight: 1000;
+		border: 0px;
+		.item-content {
+			background: none;
+			&.activated {
+				background: $SIDEMENU_TRANSPARENCY;
+			}
+			
+		}
+		&.active-page-highlight {
+			.item-content {
+				background: $SIDEMENU_TRANSPARENCY;
+			}
+			
+		}
+	}
+	.side-menu-item-alert {
+		background: none;
+		border: 0px;
+		.item-content {
+			&.activated {
+				background: none;
+			}
+			
+		}
+	}
+	.side-menu-mini {
+		background: none;
+		color: #979798;
+		border: 0px;
+		margin-left: 8px;
+		font-size: 14px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+		height: 32px;
+		.item-content {
+			background: none;
+		}
+		
+		.icon {
+			font-size: 24px;
+			color: #979798;
+		}
+		
+	}
+	.side-menu-gradient {
+		background: -webkit-linear-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+		background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+		background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+		background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+	}
+	
+	//SideMenu}
+//Generales {
+	.item-animate.ng-hide {
+		opacity: 0;
+	}
+	
+	.item-animate.ng-hide-remove,
+	.item-animate.ng-hide-add {
+		transition: all linear 150ms;
+	}
+	
+	.boton80 {
+		width: 100%;
+		margin-left: 15px;
+		margin-right: 15px;
+		vertical-align: center;
+	}
+	
+	.toprightclose {
+		height: 32px;
+		width: 40px;
+		max-height: 32px;
+		float: right;
+		display: inline-block;
+	}
+	
+	.bottomrightinfo {
+		height: 32px;
+		width: auto;
+		max-height: 32px;
+		float: right;
+		display: inline-block;
+		padding-top: 10px;
+		padding-bottom: 11px;
+		max-height: none;
+		height: 100%;
+		img {
+			height: 100%;
+			padding-right: 22px;
+		}
+		
+	}
+	.bottomleftinfo {
+		height: 32px;
+		width: auto;
+		max-height: 32px;
+		float: left;
+		display: inline-block;
+		padding-top: 11px;
+		padding-bottom: 12px;
+		max-height: none;
+		height: 100%;
+		img {
+			height: 100%;
+			padding-left: 22px;
+		}
+		
+	}
+	.margbotm5 {
+		margin-bottom: -5px;
+	}
+	
+	.botontest {
+		vertical-align: center;
+	}
+	
+	.nopaddingbottop {
+		padding-bottom: 0px;
+		padding-top: 0px;
+	}
+	
+	//No Se}
+//LoginForm
+.fullpagewhite {
+	position: absolute;
+	top: 0%;
+	background-color: white;
+	left: 0%;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	.enhist {
+		height: 40px;
+	}
+	
+}
+.center-form {
+	width: 90%;
+	max-width: 400px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	.listborders {
+		border-radius: 15px 15px 15px 15px;
+	}
+	
+	label {
+		background-color: rgba(255,255,255,0.7);
+		border-color: rgba(255,255,255,0);
+		&.top-input {
+			border-radius: 5px 5px 0px 0px;
+			height: 35px;
+		}
+		
+		&.margbot5 {
+			margin-bottom: 5px;
+		}
+		
+		&.bottom-input {
+			border-radius: 0px 0px 5px 5px;
+			height: 35px;
+		}
+		
+		&.mid-input {
+			height: 35px;
+		}
+		
+	}
+	.button-positive {
+		opacity: 0.9;
+	}
+	
+}
+//Registro {
+	.center-form-registro {
+		width: 90%;
+		max-width: 400px;
+		overflow: scroll;
+		left: 50%;
+		transform: translate(-50%, 0%);
+		.listborders {
+			border-radius: 15px 15px 15px 15px;
+		}
+		
+		label {
+			background-color: rgba(255,255,255,0.7);
+			border-color: rgba(255,255,255,0);
+			padding-top: 0px;
+			padding-bottom: 0px;
+			&.top-input {
+				border-radius: 5px 5px 0px 0px;
+				font-size: 8px;
+				height: 35px;
+			}
+			
+			&.margbot5 {
+				margin-bottom: 5px;
+			}
+			
+			&.margbotm5 {
+				margin-bottom: -5px;
+			}
+			
+			&.bottom-input {
+				border-radius: 0px 0px 5px 5px;
+				height: 35px;
+			}
+			
+			&.mid-input {
+				height: 35px;
+			}
+			
+			&.horariocomida {
+				border-radius: 5px 5px 5px 5px;
+				span {
+					font-size: 13px;
+				}
+				
+			}
+		}
+		.button-positive {
+			opacity: 0.9;
+		}
+		
+		div.back {
+			p {
+				line-height: 1.2em;
+				background-color: rgba(0,0,0,0.35);
+				padding-left: 8px;
+				padding-right: 8px;
+				padding-top: 2px;
+				padding-bottom: 1px;
+				margin-top: 3px;
+			}
+			
+		}
+	}
+	.error-box {
+		padding: 10px;
+		border: 1px solid darken($assertive, 10%);
+		background-color: $assertive;
+		border-radius: 4px;
+		margin-bottom: 10px;
+		p {
+			color: white;
+			margin: 0px;
+		}
+		
+	}
+	//Registro}
+//Menú Semanal {
+	.fondorojo {
+		background-color: red;
+	}
+	
+	.top-container {
+		height: calc(100% - 88px);
+		overflow: scroll;
+		text-align: center;
+		.noborder {
+			border: 0px;
+		}
+		
+		ion-item {
+			&.menusemanal {
+				vertical-align: top;
+				display: inline-block;
+				width: calc( 50% - 24px );
+				margin-left: 10px;
+				margin-right: 10px;
+				//next ones are to override defaults
+				            max-height: 2000px;
+				padding-left: 0px;
+				padding-right: 0px;
+				padding-bottom: 8px;
+				border: 0px;
+				img {
+					position: static;
+					display: block;
+					margin: 0 auto;
+					max-width: 100%;
+					max-height: 300px;
+				}
+				
+				h2 {
+					text-align: left;
+					width: 100%;
+					background-color: #A0A0A0;
+					color: white;
+					padding-left: 4px;
+					padding-bottom: 1px;
+					font-size: 10px;
+				}
+				
+				//}
+			p {
+				text-align: left;
+				padding-left: 4px;
+				font-size: 12px;
+				line-height: 1.2;
+				margin-right: 8px;
+			}
+			
+			&.item-thumbnail-left {
+				&.content {
+					padding-left: 8px;
+					min-height: 0px;
+				}
+				
+			}
+		}
+		&.customdish {
+			h2 {
+				background-color: goldenrod;
+			}
+			
+		}
+	}
+}
+.week-container {
+	height: auto;
+	//    overflow: scroll;
+	text-align: center;
+	border-bottom: 1px solid lightgrey;
+	div {
+		padding-top: 0px;
+		padding-bottom: 0px;
+		&.enlinea {
+			display: inline-block;
+			border: 0px;
+			vertical-align: middle;
+			img {}
+			p {
+				margin-left: 5px;
+				margin-right: 5px;
+			}
+			
+		}
+		&.titulosemana {
+			width: 200px;
+			margin-left: 0px;
+			//padding-top: 8px;
+			//padding-botton: 8px;
+		}
+		
+	}
+	.paddingbottop4 {
+		padding-top: 4px;
+		height: 40px;
+	}
+	
+}
+.bottom-container {
+	height: 48px;
+	display: inline-block;
+	width: 100%;
+	vertical-align: middle;
+	text-align: center;
+	border-top: 1px solid lightgrey;
+	.botoncomprar {
+		display: inline-block;
+		width: 170px;
+		height: 36px;
+		min-height: 36px;
+		line-height: 36px;
+		vertical-align: middle;
+		text-align: center;
+		margin-top: 6px;
+		margin-bottom: 0px;
+	}
+	
+	div {
+		&.enlinea {
+			display: inline-block;
+			border: 0px;
+			vertical-align: middle;
+			img {}
+			p {
+				margin-left: 5px;
+				margin-right: 15px;
+			}
+			
+		}
+	}
+}
+.popupchangedelete {
+	//visibility: hidden;
+	//    display: none !important;
+	width: 96%;
+	max-width: 320px;
+	background-color: #ffffff;
+	text-align: center;
+	border: 1px solid lightgrey;
+	//    border-bottom: 1px solid lightgrey;
+	position: fixed;
+	z-index: 255;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	.botonpopup {
+		margin-left: 25px;
+		margin-right: 25px;
+		width: 100px;
+	}
+	
+	div {
+		&.enlinea {
+			text-align: center;
+			display: inline-block;
+			border: 0px;
+			vertical-align: top;
+			img {
+				margin-top: -11px;
+			}
+			
+			p {
+				width: 240px;
+				margin-left: 5px;
+				margin-right: 5px;
+				line-height: 1.2em;
+			}
+			
+		}
+		&.resaque {
+			p {
+				padding-left: 32px;
+			}
+			
+		}
+	}
+}
+.fullopac {
+	-webkit-transition: 100ms linear;
+	/*to only change opacity*/
+	    /*-webkit-transition: opacity 1s linear*/
+	    -moz-transition: 100ms linear;
+	-o-transition: 100ms linear;
+	transition: 100ms linear;
+	opacity: 1;
+}
+
+.opac0 {
+	opacity: 0;
+}
+
+.opac {
+	-webkit-transition: 100ms linear;
+	/*to only change opacity*/
+	    /*-webkit-transition: opacity 1s linear*/
+	    -moz-transition: 100ms linear;
+	-o-transition: 100ms linear;
+	transition: 100ms linear;
+	opacity: 0.1;
+}
+
+.ngclassanimate {
+	-webkit-transition: 100ms linear;
+	/*to only change opacity*/
+	    /*-webkit-transition: opacity 1s linear*/
+	    -moz-transition: 100ms linear;
+	-o-transition: 100ms linear;
+	transition: 100ms linear;
+}
+
+.disabbutton {
+	opacity: 0.4;
+	font-style: italic;
+}
+
+//Menú Semanal}
+//Comida Express
+.listaexpressparent {
+ion-content {
+	div {
+		height: 100%;
+	}
+	
+}
+}
+.listaexpress {
+height: 100%;
+ion-list {
+	div {
+		height: 100%;
+		ion-item.enexpress {
+			height: 15%;
+			max-height: 150px;
+			padding: 0px;
+			margin-bottom: 0px;
+			min-height: 60px;
+			div.contain {
+				display: table;
+				max-height: 100%;
+			}
+			
+			div.fila {
+				display: table-cell;
+				vertical-align: middle;
+				max-height: 100%;
+			}
+			
+			img {
+				float: left;
+				vertical-align: middle;
+				max-height: none;
+				max-width: none;
+				width: auto;
+				width: auto;
+				position: static;
+				padding: 8px;
+			}
+			
+			p.descrip {
+				//                    display: block;
+				//                    vertical-align: middle;
+				//padding-left: 2px;
+				padding-top: 1px;
+				white-space: normal;
+				max-height: 100%;
+				line-height: normal;
+				overflow: hidden;
+				font-size: 10px;
+				margin-bottom: 0px;
+				line-height: 1.2em;
+				max-height: 3.6em;
+				margin-bottom: 4px;
+			}
+			
+			p.header {
+				padding-top: 4px;
+				font-size: 14px;
+				color: #000000;
+				line-height: normal;
+				margin-bottom: 0px;
+				white-space: normal;
+			}
+			
+			h2 {
+				float: right;
+				padding-top: 7px;
+				padding-right: 15px;
+				font-size: 18px;
+			}
+			
+		}
+	}
+}
+h2 {
+	display: block;
+	vertical-align: middle;
+	white-space: normal;
+	max-height: 100%;
+	overflow-y: hidden;
+}
+
+}
+//Comida Express
+.listacambioparent {
+ion-content {
+	div {
+		height: 100%;
+	}
+	
+}
+}
+.listacambio {
+height: 100%;
+ion-list {
+	div {
+		height: 100%;
+		ion-item.enexpress {
+			height: 13%;
+			max-height: 150px;
+			padding: 0px;
+			margin-bottom: 0px;
+			min-height: 60px;
+			.item-content {
+				height: 100%;
+				width: 100%;
+				padding: 0px;
+				min-height: 60px;
+				div.contain {
+					display: table;
+					max-height: 100%;
+				}
+				
+				div.fila {
+					display: table-cell;
+					vertical-align: middle;
+					max-height: 100%;
+				}
+				
+				img {
+					float: left;
+					vertical-align: middle;
+					max-height: none;
+					max-width: none;
+					width: auto;
+					width: auto;
+					position: static;
+					padding: 8px;
+				}
+				
+				p.descrip {
+					//                    display: block;
+					//                    vertical-align: middle;
+					//padding-left: 2px;
+					padding-top: 1px;
+					white-space: normal;
+					max-height: 100%;
+					line-height: normal;
+					overflow: hidden;
+					font-size: 10px;
+					margin-bottom: 0px;
+					line-height: 1.2em;
+					max-height: 3.6em;
+					margin-bottom: 4px;
+				}
+				
+				p.header {
+					padding-top: 4px;
+					font-size: 14px;
+					color: #000000;
+					line-height: normal;
+					margin-bottom: 0px;
+					white-space: normal;
+				}
+				
+				h2 {
+					float: right;
+					padding-top: 7px;
+					padding-right: 15px;
+					font-size: 18px;
+				}
+				
+			}
+		}
+		ion-item.enhistorial {
+			height: auto;
+			max-height: none;
+			.item-content {
+				img {
+					float: left;
+					vertical-align: top;
+					max-height: none;
+					max-width: none;
+					width: auto;
+					height: 40px;
+					position: static;
+					padding: 8px;
+				}
+				
+			}
+		}
+	}
+}
+h2 {
+	display: block;
+	vertical-align: middle;
+	white-space: normal;
+	max-height: 100%;
+	overflow-y: hidden;
+}
+
+}
+.formfinaliza {
+margin-bottom: 5px;
+label.selectfecha {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	.input-label {
+		font-size: 14px;
+	}
+	
+}
+select {
+	font-size: 12px;
+}
+
+label.selectdescuentos {
+	margin-left: 5%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 14px;
+	line-height: 1.5em;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-left-width: 0px;
+	width: 80%;
+	div.checkbox {
+		padding-top: 0px;
+		padding-bottom: 0px;
+		margin-top: 0px;
+		top: 20%;
+	}
+	
+	div.item-content {
+		margin-left: -10px;
+		overflow: normal;
+		white-space: normal;
+	}
+	
+	.checkbox-icon: : after {
+		width: 9px;
+		height: 4px;
+	}
+	
+	.checkbox-icon {
+		width: 19px;
+		height: 19px;
+	}
+	
+}
+}
+.hide {
+visibility: hidden;
+}
+
+.show {
+visibility: normal;
+}
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    
+    
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    
+    <link href="css/ionic.app.css" rel="stylesheet">
+    
+
+    <style type="text/css">
+      .platform-ios .manual-ios-statusbar-padding{
+        padding-top:20px;
+      }
+      .manual-remove-top-padding{
+        padding-top:0px; 
+      }
+      .manual-remove-top-padding .scroll{
+        padding-top:0px !important;
+      }
+      ion-list.manual-list-fullwidth div.list, .list.card.manual-card-fullwidth {
+        margin-left:-10px;
+        margin-right:-10px;
+      }
+      ion-list.manual-list-fullwidth div.list > .item, .list.card.manual-card-fullwidth > .item {
+        border-radius:0px;
+        border-left:0px;
+        border-right: 0px;
+      }
+      .show-list-numbers-and-dots ul{
+        list-style-type: disc;
+        padding-left:40px;
+      }
+      .show-list-numbers-and-dots ol{
+        list-style-type: decimal;
+        padding-left:40px;
+      }
+    </style>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/routes.js"></script>
+    
+     
+    <script src="js/directives.js"></script>
+     
+    <script src="js/services.js"></script>
+     
+    <script src="js/ionic.cloud.min.js"></script>
+     
+    <script src="js/ionic.cloud.init.js"></script>
+    
+
+    
+    <script src="lib/ionicuirouter/ionicUIRouter.js"></script>
+    
+
+  </head>
+  <body ng-app="app" animation="slide-left-right-ios7">
+  <div>
+  <ion-side-menus enable-menu-with-back-views="false" data-componentid="side-menu21">
+    <ion-side-menu-content>
+      <ion-nav-bar class="bar-positive">
+        <ion-nav-back-button></ion-nav-back-button>
+        <ion-nav-buttons side="left">
+          <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+        </ion-nav-buttons>
+      </ion-nav-bar>
+      <ion-nav-view></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" id="side-menu21">
+      <ion-content ng-controller="menuCtrl" padding="true" style="top:0px !important;" class="side-menu-left side-menu-gradient">
+        <div class="spacer" data-componentid="spacer17" style="width: 268px; height: 12px;"></div>
+        <div data-componentid="image9">
+          <img src="img/4Z0rgbdTdaPWv4OKezt3_user.svg" style="display: block; width: 150px; height: auto; margin-left: auto; margin-right: auto;">
+        </div>
+        <h4 id="menu-heading1" style="color:#FFFFFF;text-align:center;" data-componentid="heading1">{{username}}</h4>
+        <ion-list id="menu-list19" class="manual-list-fullwidth" data-componentid="list19">
+          <ion-item class="item-icon-left  side-menu-item ng-hide" id="menu-list-item46" ui-sref="nivelDePrecio" menu-close="" ng-show="admin==1" data-componentid="list-item46">
+            <i class="icon ion-android-settings"></i>Nivel de precio</ion-item>
+          <ion-item class="item-icon-left item-icon-right energized  side-menu-item-alert" id="menu-list-item14" ng-show="existedireccion==0" ng-click="adireccion()" data-componentid="list-item14">
+            <i class="icon ion-ios-location"></i>Datos de envío
+            <i class="icon ion-alert"></i>
+          </ion-item>
+          <ion-item class="item-icon-left  side-menu-item" id="menu-list-item17" ng-show="existedireccion==1" ng-click="adireccion()" data-componentid="list-item17">
+            <i class="icon ion-ios-location"></i>Datos de envío</ion-item>
+          <ion-item class="item-icon-left  side-menu-item" id="menu-list-item16" ng-show="loggedin==1" data-componentid="list-item16">
+            <i class="icon ion-person"></i>Mi perfil</ion-item>
+          <ion-item class="item-icon-left  side-menu-item" id="menu-list-item15" ui-sref="historialDePedidos" menu-close="" ng-show="loggedin==1" data-componentid="list-item15">
+            <i class="icon ion-ios-clock-outline"></i>Historial de pedidos</ion-item>
+        </ion-list>
+        <div class="spacer" data-componentid="spacer20" style="width: 248px; height: 12px;"></div>
+        <div id="menu-markdown18" ng-show="loggedin==0" style="text-align:center;" class="show-list-numbers-and-dots margbotm5" data-componentid="markdown18">
+          <p style="color:#FFFFFF;font-size:13px;">Para acceder a todas las funcionalidades, favor de ingresar con su cuenta</p>
+        </div>
+        <ion-list id="menu-list21" data-componentid="list21">
+          <ion-item class="item-icon-left  side-menu-mini" id="menu-list-item18" ng-show="loggedin==0" data-componentid="list-item18">
+            <i class="icon ion-ios-location"></i>Datos de envío</ion-item>
+          <ion-item class="item-icon-left  side-menu-mini" id="menu-list-item19" ng-show="loggedin==0" data-componentid="list-item19">
+            <i class="icon ion-person"></i>Mi perfil</ion-item>
+        </ion-list>
+        <ion-list id="menu-list22" data-componentid="list22">
+          <ion-item class="item-icon-left  side-menu-mini" id="menu-list-item20" ng-show="loggedin==0" data-componentid="list-item20">
+            <i class="icon ion-ios-clock-outline"></i>Historial de pedidos</ion-item>
+        </ion-list>
+        <div class="spacer" data-componentid="spacer21" style="width: 248px; height: 24px;"></div>
+        <a ui-sref="login" menu-close="" id="menu-button16" ng-show="loggedin==0" class="button button-positive  button-block" data-componentid="button16">Log In</a>
+        <div class="spacer" data-componentid="spacer19" style="width: 248px; height: 30px;"></div>
+        <button id="menu-button11" ng-click="logout()" ng-show="loggedin==1" class="button button-assertive  button-block" data-componentid="button11">Logout</button>
+      </ion-content>
+    </ion-side-menu>
+  </ion-side-menus>
+</div>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<ion-view title="Menu Semanal" hide-back-button="true" id="page2">
+  <ion-content padding="false" scroll="false" class="has-header">
+    <div id="menuSemanal-container2" ng-class="{0:'fullopac', 1:'opac'}[DisableClicks]" class="week-container">
+      <ion-list id="menuSemanal-list8" class="noborder">
+        <div class="item item-body noborder paddingbottop4" id="menuSemanal-list-item-container1">
+          <div class="enlinea">
+            <img src="img/NTCb7boNSDOvyGcd1Ljc_angle-left.svg" style="display: block; width: 30px; height: auto; margin-left: auto; margin-right: auto;" ng-class="{1:'opac'}[limitinf]" ng-click="limitinf==0 &amp;&amp; menuanterior()">
+          </div>
+          <div id="menuSemanal-markdown7" ng-class="{1:'fondorojo'}[admin]" style="text-align:center;" class="show-list-numbers-and-dots enlinea titulosemana">
+            <p style="margin-top:0px;color:#000000;font-size:15px;">Semana del {{InSem}}</p>
+          </div>
+          <div class="enlinea">
+            <img src="img/EPaWaa6SPCgQspMfYMTH_angle-right.svg" style="display: block; width: 30px; height: auto; margin-left: auto; margin-right: auto;" ng-class="{0:'opac'}[pos]" ng-click="pos>0 &amp;&amp; menusiguiente()">
+          </div>
+        </div>
+      </ion-list>
+    </div>
+    <ion-scroll id="menuSemanal-container10" ng-class="{0:'fullopac', 1:'opac'}[DisableClicks]" class="top-container">
+      <div class="spacer" style="width: 320px; height: 1px;"></div>
+      <ion-list id="menuSemanal-list10" class="noborder">
+        <ion-item class="item-thumbnail-left  menusemanal" id="menuSemanal-list-item32" ng-click="!DisableClicks &amp;&amp; pos==0 &amp;&amp; modifymenu(0);" ng-class="{opac : lunes.activo==0 , customdish : lunes.cust==1 }">
+          <img src="{{lunes.img}}">
+          <h2>Lunes{{lunes.extrat}}</h2>
+          <p style="white-space:normal;">{{lunes.name}} </p>
+          <p style="font-size:8px;">{{lunes.desc}}</p>
+          <p></p>
+        </ion-item>
+        <ion-item class="item-thumbnail-left  menusemanal" id="menuSemanal-list-item33" ng-class="{opac : martes.activo==0 , customdish : martes.cust==1 }" ng-click="!DisableClicks &amp;&amp; pos==0 &amp;&amp; modifymenu(1);">
+          <img src="{{martes.img}}">
+          <h2>Martes{{martes.extrat}}</h2>
+          <p style="white-space:normal;">{{martes.name}} </p>
+          <p style="font-size:8px;">{{martes.desc}}</p>
+          <p></p>
+        </ion-item>
+        <ion-item class="item-thumbnail-left  menusemanal" id="menuSemanal-list-item34" ng-class="{opac : miercoles.activo==0 , customdish : miercoles.cust==1 }" ng-click="!DisableClicks &amp;&amp; pos==0 &amp;&amp; modifymenu(2);">
+          <img src="{{miercoles.img}}">
+          <h2>Miércoles{{miercoles.extrat}}</h2>
+          <p style="white-space:normal;">{{miercoles.name}} </p>
+          <p style="font-size:8px;">{{miercoles.desc}}</p>
+          <p></p>
+        </ion-item>
+        <ion-item class="item-thumbnail-left  menusemanal" id="menuSemanal-list-item35" ng-class="{opac : jueves.activo==0 , customdish : jueves.cust==1 }" ng-click="!DisableClicks &amp;&amp; pos==0 &amp;&amp; modifymenu(3);">
+          <img src="{{jueves.img}}">
+          <h2>Jueves{{jueves.extrat}}</h2>
+          <p style="white-space:normal;">{{jueves.name}} </p>
+          <p style="font-size:8px;">{{jueves.desc}}</p>
+          <p></p>
+        </ion-item>
+        <ion-item class="item-thumbnail-left  menusemanal" id="menuSemanal-list-item36" ng-click="!DisableClicks &amp;&amp; pos==0 &amp;&amp; modifymenu(4);" ng-class="{opac : viernes.activo==0 , customdish : viernes.cust==1 }">
+          <img src="{{viernes.img}}">
+          <h2>Viernes{{viernes.extrat}}</h2>
+          <p style="white-space:normal;">{{viernes.name}} </p>
+          <p style="font-size:8px;">{{viernes.desc}}</p>
+          <p></p>
+        </ion-item>
+      </ion-list>
+    </ion-scroll>
+    <div id="menuSemanal-container3" ng-class="{0:'fullopac', 1:'opac'}[DisableClicks]" class="bottom-container item-animate">
+      <div class="bottomleftinfo">
+        <img src="img/sey2p3ePRiyr5V4979Pi_refresh.svg" style="display: block; margin-left: auto; margin-right: auto;" ng-click="popupreest(1)" ng-hide="pos!=0">
+      </div>
+      <div class="bottomrightinfo">
+        <img src="img/eSmmVmfSHaYbg4gJsjmo_piggy.svg" style="display: block; margin-left: auto; margin-right: auto;" ng-click="popupinfo(1)" ng-hide="pos!=0">
+      </div>
+      <button id="menuSemanal-button7" ng-click="!DisableClicks &amp;&amp; pos==0 &amp;&amp; comprar()" ng-class="{1:'button-dark disabbutton'}[botongris]" style="font-size:16px;border-radius:0px 0px 0px 0px;" class="button button-balanced  botoncomprar enlinea">{{preprecio}}${{precio}}.00</button>
+    </div>
+    <div id="menuSemanal-container7" ng-show="showpopup==1" class="popupchangedelete ng-hide item-animate">
+      <div class="spacer" style="width: 320px; height: 16px;"></div>
+      <div id="menuSemanal-markdown16" class="show-list-numbers-and-dots enlinea margbotm5 resaque">
+        <p style="color:#000000;">{{platatstake.name}}</p>
+      </div>
+      <div class="enlinea">
+        <img src="img/mdqDLeVESXm7fr2yRRaY_close.svg" style="display: block; height: auto; margin-left: auto; margin-right: auto;" ng-click="cancelpopup()">
+      </div>
+      <div id="menuSemanal-markdown21" class="show-list-numbers-and-dots margbotm5 enlinea">
+        <p style="color:#000000;font-size:11px;">{{platatstake.desc}}</p>
+      </div>
+      <div id="menuSemanal-markdown8" class="show-list-numbers-and-dots enlinea">
+        <p style="color:#000000;">{{eliminarreactivar}}</p>
+      </div>
+      <button id="menuSemanal-button10" ng-click="changedish(atstake)" ui-sref="cambioDePlatillo" style="border-radius:0px 0px 0px 0px;" class="button button-balanced  botonpopup">Cambiar</button>
+      <button id="menuSemanal-button9" ng-click="deletedish(atstake)" ng-show="dishactive==1" style="border-radius:0px 0px 0px 0px;" class="button button-assertive  botonpopup">Eliminar</button>
+      <button id="menuSemanal-button15" ng-click="reactivatedish(atstake)" ng-show="dishactive==0" style="border-radius:0px 0px 0px 0px;" class="button button-positive  botonpopup">Reactivar</button>
+      <div class="spacer" style="width: 320px; height: 20px;"></div>
+    </div>
+    <div id="menuSemanal-container14" ng-show="showpopupreest==1" class="popupchangedelete ng-hide item-animate">
+      <div class="spacer" style="width: 320px; height: 16px;"></div>
+      <div id="menuSemanal-markdown10" class="show-list-numbers-and-dots enlinea resaque">
+        <p style="color:#000000;">¿Descartar las modificaciones y reestablecer el menú?</p>
+      </div>
+      <div class="enlinea">
+        <img src="img/mdqDLeVESXm7fr2yRRaY_close.svg" style="display: block; height: auto; margin-left: auto; margin-right: auto;" ng-click="popupreest(0)">
+      </div>
+      <button id="menuSemanal-button14" ng-click="reestMenu()" style="border-radius:0px 0px 0px 0px;" class="button button-balanced  botonpopup">Aceptar</button>
+      <button id="menuSemanal-button17" ng-click="popupreest(0)" style="border-radius:0px 0px 0px 0px;" class="button button-assertive  botonpopup">Cancelar</button>
+      <div class="spacer" style="width: 320px; height: 20px;"></div>
+    </div>
+    <div id="menuSemanal-container15" ng-show="showpopupinfo==1" class="popupchangedelete ng-hide item-animate">
+      <div class="spacer" style="width: 320px; height: 15px;"></div>
+      <div id="menuSemanal-markdown13" class="show-list-numbers-and-dots enlinea resaque">
+        <p style="color:#000000;">Accede a ahorros en la pantalla confirmación de compra</p>
+      </div>
+      <div class="enlinea">
+        <img src="img/mdqDLeVESXm7fr2yRRaY_close.svg" style="display: block; height: auto; margin-left: auto; margin-right: auto;" ng-click="popupinfo(0)">
+      </div>
+      <button id="menuSemanal-button19" ng-click="popupinfo(0)" style="border-radius:0px 0px 0px 0px;" class="button button-positive  botonpopup">Aceptar</button>
+      <div class="spacer" style="width: 320px; height: 20px;"></div>
+    </div>
+  </ion-content>
+</ion-view>

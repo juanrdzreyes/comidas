@@ -1,0 +1,27 @@
+<ion-view title="Cambio de platillo" hide-nav-bar="true" cache-view="false" id="page8" class="listacambioparent">
+  <ion-content padding="false" class="manual-ios-statusbar-padding">
+    <div class="toprightclose">
+      <a style="display:block;" ui-sref="tabsController.menuSemanal">
+        <img src="img/Vqkm4fMNSmuPkuyu4qoA_close.svg" style="display: block; margin-left: auto;">
+      </a>
+    </div>
+    <div class="spacer" style="width: 320px; height: 26px;"></div>
+    <h4 id="cambioDePlatillo-heading3" style="color:#000000;text-align:center;">Cambio de Platillo</h4>
+    <div id="cambioDePlatillo-container12" class="listacambio">
+      <ion-list id="cambioDePlatillo-list9">
+        <ion-item class="item-thumbnail-left  enexpress" id="cambioDePlatillo-list-item43" ui-sref="tabsController.menuSemanal" ng-repeat="plat in platillos" ng-click="cambio(plat.index)" ng-hide="plat.id==(platillooriginal)">
+          <img src="{{plat.img}}">
+          <h2>+ $ {{plat.price2}}</h2>
+          <p></p>
+          <div class="contain">
+            <div class="fila">
+              <p class="header">{{plat.name}}</p>
+              <p class="descrip">{{plat.desc}}</p>
+            </div>
+            <p></p>
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>

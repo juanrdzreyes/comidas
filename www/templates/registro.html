@@ -1,0 +1,50 @@
+<ion-view title="Registro" hide-nav-bar="true" cache-view="false" id="page7">
+  <ion-content padding="false" style="background: url(img/WqRfiSyYRSG9ZPAcrOZ7_Login.jpg) no-repeat center;background-size:cover;" class="manual-ios-statusbar-padding">
+    <div id="registro-markdown2" ng-if="error" ng-click="clearerror()" class="show-list-numbers-and-dots error-box">
+      <p style="color:#000000;">{{error}}</p>
+    </div>
+    <div class="toprightclose">
+      <a style="display:block;" ui-sref="login">
+        <img src="img/hVxu5zo8SuivQ0JMU9MN_close.svg" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+      </a>
+    </div>
+    <form id="registro-form2" class="list center-form-registro">
+      <div>
+        <img src="img/gDIa4hhQQ2i7i3z3cYtm_iconotransp.png" style="display: block; width: 45%; height: auto; margin-left: auto; margin-right: auto;">
+      </div>
+      <div class="spacer" style="width: 300px; height: 13px;"></div>
+      <ion-list id="registro-list4" class="listborders">
+        <label class="item item-input top-input" id="registro-input6">
+          <span class="input-label">Nombre(s)</span>
+          <input type="text" placeholder="" ng-model="data.name">
+        </label>
+        <label class="item item-input mid-input" id="registro-input8">
+          <span class="input-label">Apellido(s)</span>
+          <input type="text" placeholder="" ng-model="data.lastname">
+        </label>
+        <label class="item item-input bottom-input margbot5" id="registro-input9">
+          <span class="input-label">Teléfono Celular</span>
+          <input type="tel" placeholder="" ng-model="data.phone">
+        </label>
+      </ion-list>
+      <div id="registro-markdown5" style="text-align:center;" class="show-list-numbers-and-dots margbotm5">
+        <p style="color:#FFFFFF;font-size:16px;">Datos para acceso</p>
+      </div>
+      <ion-list id="registro-list6" class="listborders">
+        <label class="item item-input top-input" id="registro-input20">
+          <span class="input-label">Email</span>
+          <input type="email" placeholder="" ng-model="data.email">
+        </label>
+        <label class="item item-input mid-input" id="registro-input21">
+          <span class="input-label">Password</span>
+          <input type="password" placeholder="" ng-model="data.password">
+        </label>
+        <label class="item item-input bottom-input margbot5" id="registro-input22">
+          <span class="input-label">Confirmar Password</span>
+          <input type="password" placeholder="" ng-model="data.passwordconfirm">
+        </label>
+      </ion-list>
+      <button id="registro-button3" ng-click="signup()" class="button button-positive  button-block">Registrarse</button>
+    </form>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,23 @@
+<ion-view title="Nivel de Precio" hide-nav-bar="true" cache-view="false" id="page10">
+  <ion-content padding="true" class="manual-ios-statusbar-padding">
+    <div class="toprightclose">
+      <a style="display:block;" ui-sref="tabsController.menuSemanal">
+        <img src="img/wvs6jOsMQvGU1smhgOuL_close.svg" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+      </a>
+    </div>
+    <div class="spacer" style="width: 300px; height: 25px;"></div>
+    <h4 id="nivelDePrecio-heading5" style="color:#000000;text-align:center;">Nivel de Precio</h4>
+    <form id="nivelDePrecio-form13" class="list">
+      <ion-radio id="nivelDePrecio-radio4" name="PriceTier" ng-model="data.radio" ng-click="tier(0)" ng-value="1">Nivel bajo (371 y 291)</ion-radio>
+      <ion-radio id="nivelDePrecio-radio5" name="PriceTier" ng-model="data.radio" ng-click="tier(1)" ng-value="0">Nivel medio (416 y 333)</ion-radio>
+      <ion-radio id="nivelDePrecio-radio6" name="PriceTier" ng-model="data.radio" ng-click="tier(2)" ng-value="0">Nivel alto (461 y 377)</ion-radio>
+    </form>
+    <button id="nivelDePrecio-button18" ng-click="guardar()" class="button button-positive  button-block">Guardar</button>
+    <div id="nivelDePrecio-markdown19" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">Los dos precios corresponden a: 1. El precio "full" 2. El precio mínimo después de descuentos</p>
+    </div>
+    <div id="nivelDePrecio-markdown20" style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#FF0000;font-size:19px;">Opción activa: {{opcionactiva}}</p>
+    </div>
+  </ion-content>
+</ion-view>
